@@ -1,14 +1,20 @@
 import React from 'react';
 import './App.css'
-import FetchBeers from './utils/FetchBeers';
-import ErrorBoundary from './components/ErrorBoundary'
-import Home from './components/Home';
+import ErrorBoundary from './components/errorboundaries/ErrorBoundary'
+import Home from './components/home/Home';
+import {BrowserRouter , Route , Switch} from 'react-router-dom';
+import Description from './components/description/Description';
 
 const App = ()=>{
   return(
-    <ErrorBoundary>
-      <Home />
-    </ErrorBoundary>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path={`/details`} component={Description} />
+        </Switch>
+      </ErrorBoundary>
+    </BrowserRouter>
   )
 }
 
