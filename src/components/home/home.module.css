@@ -18,6 +18,20 @@
     transition: 1s;
 }
 
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(53, 52, 52);
+}
+
+a h4{
+    color: #1b1b1d;
+}
+
 .beers:hover{
     border: 1px solid rgb(196, 196, 196);
     box-shadow: 2px 2px 15px 5px rgba(0,0,0,0.2);
